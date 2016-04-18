@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:appstudio="http://schemas.microsoft.com/developer/appx/2015/appstudio" 
+  IgnorableNamespaces="uap mp appstudio">
+    		<Identity Name="84de1b1c-e652-42af-a53a-b30f08d7d728" Publisher="CN=AppStudio" Version="1.0.0.0" />
+	    <mp:PhoneIdentity PhoneProductId="84de1b1c-e652-42af-a53a-b30f08d7d728" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+    <Properties>
+        <DisplayName>AppStudio App</DisplayName>
+        <PublisherDisplayName>AppStudio</PublisherDisplayName>
+        <Logo>images\StoreLogo.png</Logo>
+    </Properties>
+    <Dependencies>
+        <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+    </Dependencies>
+    <Resources>
+        <Resource Language="x-generate"/>
+    </Resources>
+    <Applications>
+        <Application Id="App" StartPage="http://helpourneighbors.azurewebsites.net">
+            <uap:VisualElements DisplayName="Help Our Neighbors"
+              Description="Donation app to Help Our Neighbors"
+              BackgroundColor="#ffffff"
+              Square150x150Logo="images\Square150x150Logo.png"
+              Square44x44Logo="images\Square44x44Logo.png">
+                <uap:SplashScreen Image="images\SplashScreen.png" BackgroundColor="#ffffff" />
+                <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square310x310Logo="images\Square310x310Logo.png">
+                    <uap:ShowNameOnTiles>
+                        <uap:ShowOn Tile="wide310x150Logo"/>
+						<uap:ShowOn Tile="square310x310Logo" />
+                    </uap:ShowNameOnTiles>
+                </uap:DefaultTile>
+                <uap:InitialRotationPreference>
+                    <uap:Rotation Preference="portrait"/>
+                </uap:InitialRotationPreference>
+            </uap:VisualElements>
+            <uap:ApplicationContentUriRules>
+                <uap:Rule Type="include" Match="http://helpourneighbors.azurewebsites.net" WindowsRuntimeAccess="all"/>
+            </uap:ApplicationContentUriRules>
+        </Application>
+    </Applications>
+    <Capabilities>
+        <Capability Name="internetClient" />
+    </Capabilities>
+    <appstudio:Metadata>
+        <appstudio:Item Name="appId" Value="84de1b1c-e652-42af-a53a-b30f08d7d728" />
+        <appstudio:Item Name="model" Version="1.11" />
+        <appstudio:Item Name="formula" Value="Hwa" Version="1.12.0411.1" />
+    </appstudio:Metadata>
+</Package>
